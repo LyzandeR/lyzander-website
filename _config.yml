@@ -1,40 +1,111 @@
+# Welcome to Jekyll!
 
-exclude:
-  - "/vendor/"
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "README.md"
-  - "LICENSE.md"
-  - "*.gemspec"
-
-keep_files:
-  - "CNAME"
-  - ".git"
-  - ".gitignore"
-
-
-# Site settings
-title: Airspace
-subtitle: "A free HTML5 agency template"
-# Base URL of site. It should always start with a slash,
-# and never end with a slash. Set it to a blank value if hosting at the
-# root of your server.
-# baseurl: "/" # the subpath of your site
-url: "http://www.lyzander.com" # the base hostname & protocol for your site
+# Website settings
+title: "LyzandeR"
+description: "LyzandeR's blog about data science!"
+keywords: "Theo, Boutaris, blog, Jekyll, github, data-science, R, Python, machine-learning, Spark, Hadoop"
 baseurl: ""
-cover: "/img/slider-bg.png"
-logo: "/img/logo.png"
+url: "http://www.lyzander.com/"
+# url: "http://127.0.0.1:4000"
+
+# author
+author:
+  name: 'Theo'
+  first_name: 'Theo'
+  last_name: 'Boutaris'
+  email: 'teoboot2007@hotmail.com'
+  facebook_username: ''
+  github_username: 'LyzandeR'
+  head_img: 'static/img/landing/Jac.jpg'
+  desc: 'If the statistics are boring then you have the wrong numbers said the famous Ed. Tufte; 
+    a quote I find quite accurate when it comes to data. I am a Data Scientist with experience in 
+    statistics, machine learning and coding. I am an R evangelist having published packages on CRAN
+    and being active on the R community on stackoverflow. When not coding I enjoy listening to music,
+    playing football or playing Dota2 with friends!'
+
+# sections
+sections:
+  - id: 'about-me'
+    i18n: 'nav.about_me'
+    name: 'About'
+    tpl: 'about.html'
+    css: ''
+
+  - id: 'career'
+    i18n: 'nav.career'
+    name: 'Career'
+    tpl: 'career.html'
+    css: 'timeline'
+
+  - id: 'skills'
+    i18n: 'nav.skills'
+    name: 'Skills'
+    tpl: 'skills.html'
+    css: 'team'
+
+  - id: 'projects'
+    i18n: 'nav.projects'
+    name: 'Projects'
+    tpl: 'projects.html'
+    css: 'project'
+
+  - id: 'blog'
+    i18n: 'nav.blog'
+    name: 'Blog'
+    tpl: 'blog.html'
+    css: 'testimonials navy-section'
+
+  - id: 'links'
+    i18n: 'nav.link'
+    name: 'Links'
+    tpl: 'links.html'
+    css: 'contact'
+
+# localization
+languages:
+  - locale: 'en'
+    flag: 'static/img/flags/United-States.png'
+  - locale: 'zh'
+    flag: 'static/img/flags/China.png'
+
+# blog img path
+img_path: 'http://www.jack003.com/static/img/blog'
+
+# donate
+donate:
+  wechat: 'static/img/pay/wechat.png'
+  alipay: 'static/img/pay/alipay.png'
+
+# comment
+changyan:
+  # appid: cysfY7ULn
+  # conf: prod_861928934cecb7a18e15bedaed9dae29
+disqus:
+  name: NA
+  public_key: NA
+
+# share
+bshare:
+  uuid: 513f778e-a8f7-4c20-9ec2-d29cc2328d75
+
+# baidu analytics
+ba:
+  # uuid: 317acca9ef9255b934e46371e471431d
+
+# google analytics
+ga:
+  id: UA-73784599-1
+
+# growingIO
+gio:
+  id: a49d4901c7853da9
 
 # Build settings
+encoding: "utf-8"
+
+# other settings
+highlighter: rouge
 markdown: kramdown
-
-# Google analytics
-# ga_tracking_id: "UA-XXXX-1"
-
-# Category descriptions (for archive pages)
-descriptions:
-  - cat: jekyll
-    desc: "Posts describing Jekyll setup techniques."
-
-  - cat: dummy
-    desc: "Just some placeholder posts, lorem ipsum and the rest."
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
