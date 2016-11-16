@@ -1,27 +1,23 @@
 # Welcome to Jekyll!
 
 # Website settings
-title: "LyzandeR"
-description: "LyzandeR's blog about data science!"
-keywords: "Theo, Boutaris, blog, Jekyll, github, data-science, R, Python, machine-learning, Spark, Hadoop"
-baseurl: ""
-url: "http://www.lyzander.com/"
+title: "Jalpc"
+description: "Jack's blog,use Jekyll and github pages."
+keywords: "Jack,Jalpc,blog,Jekyll,github,gh-pages"
+baseurl: "/"
+url: "http://www.lyzander.com"
 # url: "http://127.0.0.1:4000"
 
 # author
 author:
-  name: 'Theo'
-  first_name: 'Theo'
-  last_name: 'Boutaris'
-  email: 'teoboot2007@hotmail.com'
-  facebook_username: ''
-  github_username: 'LyzandeR'
-  head_img: 'static/img/landing/Jac.jpg'
-  desc: 'If the statistics are boring then you have the wrong numbers said the famous Ed. Tufte; 
-    a quote I find quite accurate when it comes to data. I am a Data Scientist with experience in 
-    statistics, machine learning and coding. I am an R evangelist having published packages on CRAN
-    and being active on the R community on stackoverflow. When not coding I enjoy listening to music,
-    playing football or playing Dota2 with friends!'
+  name: 'teo'
+  first_name: 'teo'
+  last_name: 'bout'
+  email: 'teo@wahteva.com'
+  facebook_username: 'jiakunnj'
+  github_username: 'Jack614'
+  head_img: 'static/img/landing/Jack.jpg'
+  desc: 'I am a Full Stack engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel.'
 
 # sections
 sections:
@@ -81,8 +77,8 @@ changyan:
   # appid: cysfY7ULn
   # conf: prod_861928934cecb7a18e15bedaed9dae29
 disqus:
-  name: NA
-  public_key: NA
+  name: jalpc
+  public_key: tj2MPaNlHMONwTH5bGDNSXyaBpW7q282MeUzh5CwcjJerNhK8Kxk3aWo7IckzTX7
 
 # share
 bshare:

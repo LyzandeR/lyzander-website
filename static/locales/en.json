@@ -1,6 +1,6 @@
 {
   "website":{
-    "title": "Theo's Blog"
+    "title": "Jack's blog"
   },
   "nav":{
     "home": "Home",
@@ -13,11 +13,7 @@
   },
   "about_me":{
     "about_me": "About Me",
-    "des": "'If the statistics are boring then you have the wrong numbers' said the famous Ed. Tufte; 
-    a quote I find quite accurate when it comes to data. I am a Data Scientist with experience in 
-    statistics, machine learning and coding. I am an R evangelist having published packages on CRAN
-    and being active on the R community on stackoverflow. When not coding I enjoy listening to music,
-    playing football or playing Dota2 with friends!"
+    "des": "I am a Full Stack engineer with website development, automation Ops and writing scripts experience. Life is a continuous learning process, so work makes me more rigorous, travel makes my life more colorful. I can make lots of friends when I coding and travel."
   },
   "skills":{
     "my_skills": "My Skills"
