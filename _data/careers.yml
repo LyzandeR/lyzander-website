@@ -1,55 +1,69 @@
 - name:
-    detail: Nextcode
-    i18n: nextcode
+    detail: Sainsbury's UK
   desc:
-    detail: Now I am in Nextcode and develop website with Python code for genetic analysis.
-    i18n: nextcode_des
+    detail: Currently working as a Senior Data Scientist at Sainsbury's, primarily using R and SQL.
   date:
-    detail: Apr. 2016
-    i18n: nextcode_date
+    detail: Sep. 2016 - present
   job:
-    detail: Python Developer
-    i18n: nextcode_job
-  icon: fa-plus-square
+    detail: Senior Data Scientist
+  icon: fa-shopping-cart
 
 - name:
-    detail: Netease Game
-    i18n: netease
+    detail: Omnicom Media Group UK
   desc:
-    detail: In Netease game, I learned game service system and use Python code for ops.
-    i18n: netease_des
+    detail: Worked in OMG as a Senior Data Scientist using primarily R and R Shiny.
   date:
-    detail: Jun. 2015
-    i18n: nextcode_date
+    detail: April. 2015 - Sep. 2016
   job:
-    detail: Dev Ops
-    i18n: netease_job
-  icon: fa-gamepad
+    detail: Senior Data Scientist 
+  icon: fa-video-camera
 
 - name:
-    detail: Ucloud
-    i18n: ucloud
+    detail: Experian UK
   desc:
-    detail: In ucloud, I started to deal with servers and Linux system and use shell scripts to manage massive server.
-    i18n: ucloud_des
+    detail: Worked in Experian as a Senior Data Analyst using primarily SQL and Python.
   date:
-    detail: Sep. 2013
-    i18n: ucloud_date
+    detail: Oct. 2014 - Mar. 2015
   job:
-    detail: Dev Ops
-    i18n: ucloud_job
-  icon: fa-cloud
+    detail: Senior Data Analyst 
+  icon: fa-cogs
 
 - name:
-    detail: Graduation
-    i18n: college
+    detail: Experian UK
   desc:
-    detail: At July 2013,I graduated from college and started my IT technology tour.
-    i18n: college_des
+    detail: Worked in Experian as data analyst using primarily SQL and Python.
   date:
-    detail: Jul. 2013
-    i18n: college_date
+    detail: Jun. 2013 - Sep. 2014
   job:
-    detail: Student
-    i18n: college_job
-  icon: fa-book
+    detail: Data Analyst 
+  icon: fa-cogs
+
+- name:
+    detail: MSc Finance, Investments and Risk
+  desc:
+    detail: Graduated top of my class from the University of Kent UK. The MSc was part of the actuarial science and game me a very solid foundation in statistics and data science.
+  date:
+    detail: Sep. 2012
+  job:
+    detail: MSc Student
+  icon: fa-graduation-cap
+
+- name:
+    detail: National Service GR
+  desc:
+    detail: Completed my National Service in the Military working in the Administration Office.
+  date:
+    detail: Aug. 2011
+  job:
+    detail: Administration Assistant Manager
+  icon: fa-fighter-jet
+
+- name:
+    detail: BSc Accounting and Finance
+  desc:
+    detail: Graduated from the University of Macedonia in Thessaloniki GR.
+  date:
+    detail: Jan. 2010
+  job:
+    detail: BSc Student
+  icon: fa-graduation-cap
