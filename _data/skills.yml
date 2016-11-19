@@ -1,20 +1,20 @@
-- name: Python
+- name: R
   percentage: 85
 
 - name: HTML/CSS
   percentage: 65
 
-- name: Linux/Shell
-  percentage: 75
-
-- name: jQuery
-  percentage: 85
-
-- name: AngularJS
-  percentage: 80
-
-- name: Ionic
+- name: Python
   percentage: 70
 
-- name: Vuejs
-  percentage: 65
+- name: Machine Learning
+  percentage: 85
+
+- name: Spark
+  percentage: 70
+
+- name: Statistics
+  percentage: 80
+
+- name: SQL
+  percentage: 75
