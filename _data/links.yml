@@ -1,11 +1,11 @@
-- last_name: Celine
+- last_name: Rbloggers
   first_name:
-  desc: 'Painter.'
-  website: 'http://angular.jack003.com'
-  email: '805963294@qq.com'
+  desc: 'A blog dedicated to the R programming language.'
+  website: 'http://www.r-bloggers.com'
+  email: 'Tal.Galili@gmail.com'
 
-- last_name: Lucas
-  first_name: Schejtman
-  desc: 'Full Stack Developer.'
-  website: 'http://lucasschejtman.github.io'
-  email: 'lucas.schejtman@gmail.com'
+- last_name: Footballer
+  first_name: 
+  desc: 'An interactive application about European Football.'
+  website: 'http://lyzander.shinyapps.io/FootballeR/'
+  email: 'theo.boutaris@lyzander.com'
