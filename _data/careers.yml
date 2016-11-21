@@ -31,7 +31,7 @@
 - name:
     detail: Experian UK
   desc:
-    detail: Worked in Experian as data analyst using primarily SQL and Python.
+    detail: Worked in Experian as a data analyst using primarily SQL and Python.
   date:
     detail: Jun. 2013 - Sep. 2014
   job:
@@ -41,7 +41,7 @@
 - name:
     detail: MSc Finance, Investments and Risk
   desc:
-    detail: Graduated top of my class from the University of Kent UK. The MSc was part of the actuarial science and game me a very solid foundation in statistics and data science.
+    detail: Graduated top of the class from the University of Kent UK. The MSc was part of the actuarial science and established a very solid foundation in statistics and data science.
   date:
     detail: Sep. 2012
   job:
@@ -51,7 +51,7 @@
 - name:
     detail: National Service GR
   desc:
-    detail: Completed my National Service in the Military working in the Administration Office.
+    detail: Completed the National Service in the Military working in the Administration Office.
   date:
     detail: Aug. 2011
   job:
