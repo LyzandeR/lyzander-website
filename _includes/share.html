@@ -1,19 +1,19 @@
 <h2>Share:</h2>
 
-<ul class="share-buttons">
-  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&t=Data%20Science%20Blog" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
-  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&text=Data%20Science%20Blog:%20http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Tweet"><img alt="Tweet" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
-  <li><a href="https://plus.google.com/share?url=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Google+.svg"></a></li>
-  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&title=Data%20Science%20Blog&summary=A%20blog%20about%20Data%20Science&source=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
-</ul>
+<div class="theo-share-buttons" align="left">
+  <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&t=Data%20Science%20Blog" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Facebook.svg"></a>
+  <a href="https://twitter.com/intent/tweet?source=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&text=Data%20Science%20Blog:%20http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Tweet"><img alt="Tweet" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Twitter.svg"></a>
+  <a href="https://plus.google.com/share?url=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Google+.svg"></a>
+  <a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&title=Data%20Science%20Blog&summary=A%20blog%20about%20Data%20Science&source=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a>
+</div>
 
 
 <style>
-ul.share-buttons li{
+.theo-share-buttons li{
   display: inline;
 }
 
-ul.share-buttons .sr-only {
+.theo-share-buttons .sr-only {
   position: absolute;
   clip: rect(1px 1px 1px 1px);
   clip: rect(1px, 1px, 1px, 1px);
@@ -24,7 +24,7 @@ ul.share-buttons .sr-only {
   overflow: hidden;
 }
 
-ul.share-buttons img{
+.theo-share-buttons img{
   width: 32px;
 }
 </style>
