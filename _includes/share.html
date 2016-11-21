@@ -1,10 +1,30 @@
 <h2>Share:</h2>
 
-<div class="bshare-custom">
-	<a title="分享到微信" class="bshare-weixin"></a>
-	<a title="分享到QQ空间" class="bshare-qzone"></a>
-	<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
-	<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
-</div>
-<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid={{ site.bshare.uuid }}&amp;pophcol=1&amp;lang=zh"></script>
-<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+<ul class="share-buttons">
+  <li><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&t=Data%20Science%20Blog" title="Share on Facebook" target="_blank"><img alt="Share on Facebook" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Facebook.svg"></a></li>
+  <li><a href="https://twitter.com/intent/tweet?source=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&text=Data%20Science%20Blog:%20http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Tweet"><img alt="Tweet" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Twitter.svg"></a></li>
+  <li><a href="https://plus.google.com/share?url=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Share on Google+"><img alt="Share on Google+" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/Google+.svg"></a></li>
+  <li><a href="http://www.linkedin.com/shareArticle?mini=true&url=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D&title=Data%20Science%20Blog&summary=A%20blog%20about%20Data%20Science&source=http%3A%2F%2F%7B%7B%20{{site.url}}%20%7D%7D%7B%7B%20{{page.url}}%20%7D%7D" target="_blank" title="Share on LinkedIn"><img alt="Share on LinkedIn" src="{{site.url}}/static/img/social_flat_rounded_rects_svg/LinkedIn.svg"></a></li>
+</ul>
+
+
+<style>
+ul.share-buttons li{
+  display: inline;
+}
+
+ul.share-buttons .sr-only {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0;
+  border: 0;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+ul.share-buttons img{
+  width: 32px;
+}
+</style>
