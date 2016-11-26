@@ -9,3 +9,9 @@
   desc: 'An interactive application about European Football.'
   website: 'http://lyzander.shinyapps.io/FootballeR/'
   email: 'theo.boutaris@lyzander.com'
+
+- last_name: Coppelia
+  first_name: 
+  desc: 'A website and blog for Data Science'
+  website: 'http://www.coppelia.io'
+  email: 'info@coppelia.io'
