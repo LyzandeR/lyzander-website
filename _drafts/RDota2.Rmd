@@ -1,0 +1,155 @@
+---
+title: "RDota2"
+author: "Theo Boutaris"
+date: "26 November 2016"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+Dota has come to R!
+
+![](www.lyzander.com/assets/dota-2.jpg)
+
+\     
+(or maybe vice versa!)
+
+
+## RDota2
+
+If you know Valve's popular game Dota2 then you will be pleased to know that it has come to R. If
+you don't, it might interest you to have a look at [steam](http://store.steampowered.com/app/570/)
+to find out what it is. As a short introduction, it is one of the most popular video games ever 
+made with a huge fan base of around 13 million registered users (at the time of writing)! To make
+things even most interesting, you can see that Valve has actually paid the 
+[biggest prize](http://www.esportsearnings.com/tournaments) ever in e-sports. The International 
+Dota2 Tournament, has paid $20.7 million to its winners in August 2016.
+
+So, how does this relate to R? Well, apparently Valve has released an API for Dota2's data (and
+we are talking about a lot of data!), which is now available through R with the release of RDota2.
+
+The package is currently on CRAN and can be installed via:
+
+```{R, eval = FALSE}
+install.packages('RDota2')
+```
+
+Valve give away a huge amount of data, which is accessible through RDota2. Every single game is 
+recorded and data is available for free through the package. RDota2 gives you access to the 
+following API methods:
+
+Dota 2 methods relating to match information:
+
+* GetLeagueListing    
+  Information about DotaTV-supported leagues.
+* GetLiveLeagueGames    
+  A list of in-progress league matches, as well as details of that match as it unfolds.
+* GetMatchDetails    
+  Information about a particular match.
+* GetMatchHistory    
+  A list of matches, filterable by various parameters.
+* GetMatchHistoryBySequenceNum     
+  A list of matches ordered by their sequence num.
+* GetScheduledLeagueGames     
+  A list of scheduled league games coming up.
+* GetTeamInfoByTeamID     
+  A list of all the teams set up in-game.
+* GetTournamentPlayerStats     
+  Stats about a particular player within a tournament.
+* GetTopLiveGame     
+
+Dota 2 methods relating to Dota 2 economy:
+
+* GetGameItems     
+  Dota 2 In-game items
+* GetItemIconPath     
+* GetHeroes     
+  A list of heroes within Dota 2.
+* GetRarities     
+  Dota 2 item rarity list.
+* GetTournamentPrizePool      
+  The current prizepool for specific tournaments.
+* GetEventStatsForAccount     
+
+You can access the Steam API Documentation from [this link](https://wiki.teamfortress.com/wiki/WebAPI).
+
+RDota2 provides the above methods with the use of the corresponding `get_*` functions:
+
+## Setting up RDota2
+
+In order to start using the package you would need a steam api key, which you can get from the
+[steam community](https://steamcommunity.com/login/home/?goto=%2Fdev%2Fapikey). You will also need
+a steam account. 
+
+Once you have a key you can provide it to `key_actions`, which will make it available to all RDota2
+functions so that you won't have to re-enter it every time you use an API method.
+
+## Example of using RDota2
+
+Let's see how we would use RDota2!
+
+After we have installed the package, we load it with `library` and use `key actions` to register a 
+key:
+
+```{R}
+#load RDota2
+library(RDota2)
+
+#register key
+key_actions(action = 'register_key', value = Sys.getenv('RDota_KEY'))
+```
+
+The `value` argument requires the key we received from Steam Community. Although we could just stick
+the actually key value there (it is just a combination of numbers and letters), best practice 
+dictates we save it in an environmental variable, which we can then call with `Sys.getenv` as I did
+above. There is a step by step explanation on how to create a system variable on the RDota2 [tutorial](https://cran.r-project.org/web/packages/RDota2/vignettes/RDota2.html).
+
+Now that we have registered a key we can call each one of the API methods, seen above. I will show
+you some examples below:
+
+The most useful (probably) function would be `get_match_details` which allows us to retrieve details
+of a particular match.
+
+```{R}
+#match list contains information about both players and the match
+match_details <- get_match_details(match_id = 2686721815)$content
+
+#match_details[[1]] is a list with all the players - usually 10
+#match_details[[1]][[1]] is just one of the 10 players
+str(match_details[[1]][[1]])
+```
+
+This gives you an idea of the vast amount of information you can get for just **one** match!
+As you can see you have full details for each one of the players participating (usually ten), 
+including items, kills, deaths, assists, gold, experience last hits and so much more. You also get
+information about the specific match!
+
+Another important function shows us the current live league games:
+
+```{R}
+#information returned about just the first game
+str(get_live_league_games()$content$games[[1]])
+```
+
+And then we have functions that show all Dota2 Heroes and all Dota2 Items:
+
+```{R}
+#items
+head(get_game_items()$content, 10)
+
+#heroes
+head(get_heroes()$content, 10)
+```
+
+
+This is a first taste of the functions that can be used to access the Steam API. If you want 
+details about every single function you can follow the [RDota2 tutorial](https://cran.r-project.org/web/packages/RDota2/vignettes/RDota2.html). The vast amount
+of data that is offered on the API can be used for data science analysis on many occassions.
+For example, we could predict the winning team based on hero combinations or players' past 
+performances using machine learning. But I will leave that for another post!
+
+The code for the full package is hosted on [github](https://github.com/LyzandeR/RDota2).
+
+Thanks for reading! 
