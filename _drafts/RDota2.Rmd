@@ -1,7 +1,4 @@
 ---
-title: "RDota2"
-author: "Theo Boutaris"
-date: "26 November 2016"
 output: html_document
 ---
 
@@ -11,7 +8,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 Dota has come to R!
 
-![](www.lyzander.com/assets/dota-2.jpg)
+![](http://www.lyzander.com/assets/dota-2.jpg)
 
 \     
 (or maybe vice versa!)
@@ -75,7 +72,7 @@ Dota 2 methods relating to Dota 2 economy:
 
 You can access the Steam API Documentation from [this link](https://wiki.teamfortress.com/wiki/WebAPI).
 
-RDota2 provides the above methods with the use of the corresponding `get_*` functions:
+RDota2 utilizes the above methods with the use of the corresponding `get_*` functions:
 
 ## Setting up RDota2
 
@@ -119,6 +116,9 @@ match_details <- get_match_details(match_id = 2686721815)$content
 #match_details[[1]] is a list with all the players - usually 10
 #match_details[[1]][[1]] is just one of the 10 players
 str(match_details[[1]][[1]])
+
+#information about the match
+str(match_details[-1])
 ```
 
 This gives you an idea of the vast amount of information you can get for just **one** match!
@@ -126,11 +126,11 @@ As you can see you have full details for each one of the players participating (
 including items, kills, deaths, assists, gold, experience last hits and so much more. You also get
 information about the specific match!
 
-Another important function shows us the current live league games:
+Another important function shows us the Dota TV-suppported leagues:
 
 ```{R}
-#information returned about just the first game
-str(get_live_league_games()$content$games[[1]])
+#available leagues
+str(get_league_listing()$content)
 ```
 
 And then we have functions that show all Dota2 Heroes and all Dota2 Items:
@@ -144,9 +144,9 @@ head(get_heroes()$content, 10)
 ```
 
 
-This is a first taste of the functions that can be used to access the Steam API. If you want 
+This is a first taste of the functions that can be used to access the Dota2 Steam API. If you want 
 details about every single function you can follow the [RDota2 tutorial](https://cran.r-project.org/web/packages/RDota2/vignettes/RDota2.html). The vast amount
-of data that is offered on the API can be used for data science analysis on many occassions.
+of data that is offered through the API can be used for data science analysis on many occassions.
 For example, we could predict the winning team based on hero combinations or players' past 
 performances using machine learning. But I will leave that for another post!
 
