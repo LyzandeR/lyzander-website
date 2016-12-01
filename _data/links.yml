@@ -1,18 +1,18 @@
 - last_name: Rbloggers
   first_name:
-  desc: 'A blog dedicated to the R programming language.'
+  desc: 'A Blog Dedicated to the R Programming Language.'
   website: 'http://www.r-bloggers.com'
   email: 'Tal.Galili@gmail.com'
 
 - last_name: Coppelia
   first_name: 
-  desc: 'A website and blog for Data Science'
+  desc: 'Machine Learning, Business Science and Analytics.'
   website: 'http://www.coppelia.io'
   email: 'info@coppelia.io'
 
 - last_name: Footballer
   first_name: 
-  desc: 'An interactive application about European Football.'
+  desc: 'An Interactive Application about European Football.'
   website: 'http://lyzander.shinyapps.io/FootballeR/'
   email: 'theo.boutaris@lyzander.com'
 
