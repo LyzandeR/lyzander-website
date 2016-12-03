@@ -13,7 +13,7 @@
   img: 'static/img/landing/football.jpeg'
   desc: 'FootalleR is a free interactive application about European Football written in R shiny, JavaScript, HTML and CSS.'
 
-  - name: 'colf'
+- name: 'colf'
   url: '/LyzandeR/colf'
   img: 'static/img/landing/Rlogo.png'
   desc: 'colf is an R package (available on CRAN) used to perform a least squares constrained optimization on a linear objective function.'
