@@ -7,13 +7,13 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Vignettes on CRAN and Travis-ci
+### Vignettes on CRAN and Travis-CI
 
 By default when uploading a package to CRAN or testing a package on Travis, the code on the 
 vignette will be run in order to make sure that it is reproducible. That is understandable and 
 actually really helpful, as it minimises bugs. 
 
-## The problem
+### The problem
 
 What happens though when your code either takes too long to run (imagine running a complicated
 model which takes 20 hours) or requires using a password (imagine creating an API where you would 
@@ -24,7 +24,7 @@ test that your code works. This leads us to the question:
 
 How can we ignore vignette code testing on CRAN or Travis, but test it locally?
 
-## The solution - CRAN
+### The solution - CRAN
 
 When I was preparing the RDota2 package (an API client for Valve's Dota2) I needed to use a key to
 access the API. In order to do this I created an environment variable with the key value locally. 
@@ -40,25 +40,25 @@ Therefore, I needed to find a way to test my vignette code locally (making sure 
 work correctly with my key) but not on CRAN and Travis. For CRAN I used the following 
 (modified from `httr`'s tutorial):
 
-If we setup an environment variable on our local machines named `CRAN` and set that to `FALSE`,
+If we setup an environment variable on our local machines named `LOCAL` and set that to `true`,
 then we can use that in a setup chunk in the vignette:
 
 ```{r, eval = FALSE}
-CRAN <- !identical(tolower(Sys.getenv("CRAN")), "true")
+LOCAL <- identical(Sys.getenv("LOCAL"), "true")
 knitr::opts_chunk$set(purl = CRAN)
 ```
 
-and then you can use `eval = CRAN` as a chunk option (in next chunks).
+Then we can use `eval = LOCAL` as a chunk option (in next chunks).
 
-When building the package locally `!identical(tolower(Sys.getenv("CRAN")), "true")` will return
+When building the package locally `identical(Sys.getenv("LOCAL"), "true")` will return
 `TRUE`. This will result in `eval = TRUE` in all chunks and the code will be checked. On the other 
-hand, `!identical(tolower(Sys.getenv("CRAN")), "true")` will return `FALSE` on CRAN, 
+hand, `identical(Sys.getenv("LOCAL"), "true")` will return `FALSE` on CRAN, 
 which will result in `eval = FALSE` in individual chunks and the code will not run.
 
-## The solution - Travis
+### The solution - Travis
 
-Although the Cran solution above would work for Travis too (since there is no `CRAN` environment
-variable), I also provide a secondary solution in case anyone needs it.
+Although the Cran solution above would work for Travis too (since there is no `LOCAL` environment
+variable on Travis), I also provide a secondary solution in case anyone needs it.
 
 On Travis, by default, there is an environment variable called `Travis`. `Travis` is set to `true`. 
 Using the same technique as CRAN we specify in our setup chunk:
@@ -68,19 +68,31 @@ TRAVIS <- !identical(tolower(Sys.getenv("TRAVIS")), "true")
 knitr::opts_chunk$set(purl = TRAVIS)
 ```
 
-and then you can use `eval = TRAVIS` as a chunk option (in next chunks).
+Then we can use `eval = TRAVIS` as a chunk option (in next chunks).
 
 When building the package locally `!identical(tolower(Sys.getenv("TRAVIS")), "true")` will return
 `TRUE`. This will result in `eval = TRUE` in all chunks. On the other hand, 
 `!identical(tolower(Sys.getenv("TRAVIS")), "true")` will return `FALSE` on TRAVIS, 
 which will result in `eval = FALSE` in individual chunks and the code will not run.
 
-## The solution - Travis and CRAN
+At this point I think it is worth mentioning that Travis-CI actually allows users to create their
+own environment variables and even encrypt them (which is perfect for credentials). You
+can find out more about the encryption process [here](https://docs.travis-ci.com/user/environment-variables/#Defining-encrypted-variables-in-.travis.yml).
 
-We can actually just use `CRAN` in the same way defined in the CRAN solution as this checks the
-local `CRAN` environment variable we defined (this won't exist on CRAN or TRAVIS).
+### The solution - Travis and CRAN
 
-## Apendix - How to setup an environment variable
+We can actually just use `LOCAL` in the same way defined in the Cran solution as this checks the
+`LOCAL` environment variable we defined (which won't exist on CRAN or Travis).
+
+If you would like to see a real example you could check my vignette for RDota2
+[here](https://github.com/LyzandeR/RDota2/blob/master/vignettes/RDota2.Rmd).
+
+Thanks for reading!
+
+\     
+\       
+
+### Apendix - How to setup an environment variable
 
 There are 5 easy steps in order to create an environment variable. I demonstrate the steps from 
 the RDota2 package, but the methodology is exactly the same:
@@ -90,3 +102,6 @@ the RDota2 package, but the methodology is exactly the same:
 3. In the .Renviron file type a line like `RDota_KEY=xxxxxxxx`, where RDota_KEY will be the name of the R environment variable and xxxxxxxx will be your individual API Key. Make sure the last line in the file is empty (if it isn't R will silently fail to load the file). If you're using an editor that shows line numbers, there should be two lines, where the second one is empty.
 4. Restart your R session if you were using one, since .Renviron is parsed at the start of an R session.
 5. Access the key on your R session using `Sys.getenv`.
+
+
+\       
