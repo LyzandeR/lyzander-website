@@ -2,7 +2,7 @@
 
 This is my professional website!
 
-You can find the source code of the full website here. It includes a section about my professional milestones so far and a blog about Data Science. 
+You can find the source code of the full website here. It includes a section about my professional milestones and a blog about Data Science. 
 
 I hope you like it! Feedback is always welcome.
 
