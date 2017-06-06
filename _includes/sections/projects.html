@@ -24,10 +24,12 @@
                   {% if project.url %}
                   <ul class="list-inline">
                       <li>
-                          <a class="github-button" href="{{ project.url | prepend: 'https://github.com'}}" data-icon="octicon-star" data-count-href="{{ project.url | append: '/stargazers' }}" data-count-api="{{ project.url | prepend: '/repos' | append: '#stargazers_count' }}" data-count-aria-label="# stargazers on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Star</a>
+                          <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.url }}/stargazers" class="btn btn-white btn-xs star"><i class="fa fa-star"></i> ...</a>&emsp;&emsp;
+                          <!--<a class="github-button" href="{{ project.url | prepend: 'https://github.com'}}" data-icon="octicon-star" data-count-href="{{ project.url | append: '/stargazers' }}" data-count-api="{{ project.url | prepend: '/repos' | append: '#stargazers_count' }}" data-count-aria-label="# stargazers on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Star</a>-->
                       </li>
                       <li>
-                          <a class="github-button" href="{{ project.url | prepend: 'https://github.com'}}" data-icon="octicon-fork" data-count-href="{{ project.url | append: '/network' }}" data-count-api="{{ project.url | prepend: '/repos' | append: '#forks_count' }}" data-count-aria-label="# forks on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>
+                          <a target="_blank" style="width: 65px;" href="https://github.com/{{ project.url }}/network" class="btn btn-white btn-xs fork"><i class="fa fa-code-fork"></i> ...</a>
+                          <!--<a class="github-button" href="{{ project.url | prepend: 'https://github.com'}}" data-icon="octicon-fork" data-count-href="{{ project.url | append: '/network' }}" data-count-api="{{ project.url | prepend: '/repos' | append: '#forks_count' }}" data-count-aria-label="# forks on GitHub" aria-label="Star hydepress/jekyll-install on GitHub">Fork</a>-->
                       </li>
                   </ul>
                   {% endif %}
