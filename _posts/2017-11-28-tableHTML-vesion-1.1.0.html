@@ -140,7 +140,7 @@ $(document).ready(function () {
 </div>
 <p>A couple of years ago while I was developing a <a href="https://lyzander.shinyapps.io/FootballeR/">football app</a> using shiny, I found it somewhat difficult to build a pretty HTML table exactly the way I wanted. For example, drawing vertical lines every three columns seemed like a difficult task back then even using great packages like <code>xtable</code>. This provided the motivation to team up with <a href="https://uk.linkedin.com/in/clemenszauchner/en">Clemens</a> and develop <code>tableHTML</code>.</p>
 <p><code>tableHTML</code> is used to make CSS-ible HTML tables in an intuitive way. Those tables can be used in shiny applications, Rmarkdown documents (like this one!) or any other application that accepts HTML.</p>
-<p>Let’s see a few of its main uses.</p>
+<p>Let’s see a few of its main use cases.</p>
 </div>
 <div id="a-simple-html-table" class="section level2">
 <h2>A simple HTML table</h2>
@@ -323,6 +323,7 @@ mtcars[1:10, ] %&gt;%
 </table>
 </div>
 <div id="a-scientific-html-table" class="section level2">
+<br>
 <h2>A scientific HTML table</h2>
 <p><code>tableHTML</code> provides two themes (rshiny-blue and scientific) that can be used directly with the <code>tableHTML</code> function.</p>
 <pre class="r"><code>library(tableHTML)
@@ -504,8 +505,9 @@ mtcars[1:10, ] %&gt;%
 </table>
 </div>
 <div id="features-of-tablehtml" class="section level2">
+<br>
 <h2>Features of tableHTML</h2>
-<p><code>tableHTML</code> allows the user to add to the table:</p>
+<p><code>tableHTML</code> allows the user to extend the table with:</p>
 <ul>
 <li>New headers</li>
 <li>Second headers</li>
@@ -778,6 +780,7 @@ mtcars[1:10, ] %&gt;%
 </table>
 </div>
 <div id="beautify-with-css" class="section level2">
+<br>
 <h2>Beautify with CSS</h2>
 <p>Currently the package offers the following <code>add_css</code> functions which add CSS to their respective part of the HTML table:</p>
 <ul>
@@ -1070,6 +1073,7 @@ mtcars[1:10, ] %&gt;%
 </table>
 </div>
 <div id="conditional-formatting" class="section level2">
+<br>
 <h2>Conditional Formatting</h2>
 <p>Another special feature of the package is conditional formatting. You can see an example below using <code>add_css_conditional_column</code>.</p>
 <pre class="r"><code>mtcars[1:15, ] %&gt;%
@@ -1343,6 +1347,7 @@ mtcars[1:10, ] %&gt;%
 </table>
 </div>
 <div id="colour-ranking" class="section level2">
+<br>
 <h2>Colour ranking</h2>
 <p>Various colour rank themes (including custom) are also available.</p>
 <pre class="r"><code>mtcars[1:15, ] %&gt;%
@@ -1598,6 +1603,7 @@ mtcars[1:10, ] %&gt;%
 </table>
 </div>
 <div id="more-on-tablehtml" class="section level2">
+<br>
 <h2>More on tableHTML</h2>
 <p>It would be impossible to fit all the package’s uses on just one post, so I will keep it short here. There are a number of resources / vignettes to have a look at if you would like to find out more about its uses:</p>
 <ul>
