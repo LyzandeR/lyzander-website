@@ -5,7 +5,7 @@
   <meta property="og:title" content="{{ page.title }}">
   <meta property="og:image" content="{{ page.image }}">
   <meta property="og:description" content="{{ page.desc }}">
-  <meta property="og:url" content="{{ site.url | prepend: page.url }}">
+  <meta property="og:url" content="{{ page.url | prepend: site.url }}">
   {% if page.desc %}
     <meta content="{{ page.desc }}" name="description">
   {% endif %}
