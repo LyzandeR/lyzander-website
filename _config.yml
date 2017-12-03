@@ -81,3 +81,6 @@ markdown: kramdown
 kramdown:
   input: GFM
   syntax_highlighter: rouge
+
+#blog post images
+tableHTMLimage: "http://rmarkdown.rstudio.com/images/RMarkdownOutputFormats.png"

@@ -1,6 +1,7 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    wdm (~> 0.1.0)
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     colorator (1.1.0)
