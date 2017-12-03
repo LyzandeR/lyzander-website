@@ -6,7 +6,6 @@ description: "Theo's blog about Data Science!"
 keywords: "Theo, Boutaris, R, Python, blog, Jekyll, github, netlify, Data Science, Spark, Shiny, Web Development"
 baseurl: "/"
 url: "http://www.lyzander.com"
-tableHTMLimage: "http://rmarkdown.rstudio.com/images/RMarkdownOutputFormats.png"
 # url: "http://127.0.0.1:4000"
 
 # author
